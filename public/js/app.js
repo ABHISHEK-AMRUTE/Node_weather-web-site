@@ -10,7 +10,7 @@ var mes1 =document.querySelector('#mes1')
 var mes2 =document.querySelector('#mes2')
 form.addEventListener('submit',(e)=>{
     e.preventDefault()
-    var st = "http://localhost:3000/weather?address=" + inp.value;
+    var st = "/weather?address=" + inp.value;
     fetch(st).then((response)=>{
        
         response.json().then((data)=>{

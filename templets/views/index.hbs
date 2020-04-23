@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html>
-       
-       <title>
-       {{title}}
-     </title>
-    
-        <body>
-        {{>header}}<br>
-    {{content}}<br>
-    {{>footer}}
-    <form>
-        <input placeholder="Location">
-        <button>Search</button>
-    </form>
-    <p id="mes1">
 
-    </p>
-    <p id="mes2"></p>
-     <script src="js/app.js"></script>
-    </body>
+<title>
+    {{title}}
+    
+</title>
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<body>
+    {{>header}}<br>
+    <div  class="w3-card w3-padding w3-large w3-center"  style="margin: 20px;">{{content}}</div><br>
+    
+   
+   <div  class="w3-card w3-padding"  style="margin: 10px;">
+        <form class="w3-container">
+
+        <label class="w3-text-blue"><b>Enter the city name</b></label>
+        <input class="w3-input w3-border" type="text"  placeholder="Location">
+        <br>
+        <button class="w3-btn w3-blue">Search</button>
+        <br><div id="spinner" class="spinner-border text-primary" style="margin: 5px;"></div>
+       <p class="w3-large "id="mes1" style="font-weight: bold;">
+
+       </p>
+       <p class="w3-large " id="mes2"></p>
+    </form>
+   </div>
+    {{>footer}}
+    <script src="js/app.js"></script>
+
+    <div class="w3-card w3-padding w3-large" style="font-weight:bold;margin: 10px;">
+        <p>Must visit my end user application : Vision chat API<br>A one step solution for integrating chat funtionalities in applications<br>
+        <a href="https://vision-chat-api.herokuapp.com/" style="Color:Blue;">Visit Landing page</a></p>
+    </div>
+</body>
+
 </html>

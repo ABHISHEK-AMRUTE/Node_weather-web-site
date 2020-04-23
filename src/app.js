@@ -17,23 +17,23 @@ app.use(express.static(pathdirectory))
 app.get('',(req,res)=>
 {  
     res.render('index',{
-        title:'Weather',
-        content:'created dynamically',
+        title:'Weather APP',
+        content:'Welcome To the Weather App. See temperature in fahrenheit arround you with a single button click.',
         name:'abhishek amrute'
     })
 })
 app.get('/help',(req,res)=>{
     res.render('help',{
         title:'Help',
-        content:'created dynamically',
+        content:'Operating this app is very simple. What you have to do is to provide your city name, and the APP will provide you current Temperature in  fahrenheit along with chance of rain.',
         name:'abhishek amrute'
     })
 })
 app.get('/about',(req,res)=>
 {
     res.render('about',{
-        title:'about',
-        content:'created dynamically',
+        title:'About',
+        content:'This is a Nodejs project created by Abhishek Amrute for educational purpose.',
         name:'abhishek amrute'
     })
 })
@@ -67,7 +67,7 @@ app.get('/weather',(req,res)=>{
                     console.log(ress.body.currently.summary+" " +ress.body.currently.temperature+" And the cahnce of rain is : " +ress.body.currently.precipProbability*100)
                     res.send({
                         summary:ress.body.currently.summary,
-                        temperature : ress.body.currently.temperature,
+                        temperature : ress.body.currently.temperature + " °F",
                         rain_probability : ress.body.currently.precipProbability
                     })
                 }
